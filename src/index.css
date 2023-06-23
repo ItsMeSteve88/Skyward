@@ -2,13 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.left{
-   @apply bg-red-500;
-}
-.right{
-   @apply bg-blue-500;
-}
+
+/* MEDIAQUERIES */
 
 .body {
-   @apply grid md:grid-cols-2 max-w-[1600px] mx-auto;
+   @apply bg-teal-300 max-w-[1600px] w-[320px] md:w-[768px] lg:w-[1200px] 2xl:w-[1600px] h-[1952px] md:h-[802px] lg:h-[1286px] 2xl:h-[780] mx-auto;
+}
+
+.sidebar{
+   @apply bg-red-500 w-[288px] md:w-[280px] lg:w-[360px] 2xl:w-[360px] h-[585px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px];
+}
+
+.main{
+   @apply bg-blue-500  w-[288px] md:w-[416px] lg:w-[720px] 2xl:w-[1120px] h-[1319px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px];
+}
+
+/* POSITIONING */
+.bodypos {
+   @apply flex-col p-4 md:p-6 lg:p-10 justify-end items-start self-stretch md:flex md:flex-row gap-4 md:gap-6 lg:gap-10  md:shrink-0
+}
+
+.sidebarpos {
+   @apply flex-col items-start gap-4 md:gap-5 self-stretch md:shrink-0;
 }

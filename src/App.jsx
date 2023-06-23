@@ -4,9 +4,13 @@ function App() {
   return (
     <div>
         <Navbar />
-        <div className="body">
-           <div className="left">left</div>
-           <div className="right">right</div>
+        <div className="body bodypos">
+           <div className="sidebar sidebarpos"></div>
+           <div className="main">right
+              <div className='bg-orange-300 h- md:w-[416px] md:h-[709px] '>
+                 todays highlights
+              </div>
+           </div>
            
         </div>
     </div>

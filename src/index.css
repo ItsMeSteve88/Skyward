@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.left{
+   @apply bg-red-500;
+}
+.right{
+   @apply bg-blue-500;
+}
+
+.body {
+   @apply grid md:grid-cols-2 max-w-[1600px] mx-auto;
+}

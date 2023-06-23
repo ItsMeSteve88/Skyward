@@ -5,6 +5,10 @@
 
 /* MEDIAQUERIES */
 
+.navbar {
+   @apply max-w-[1600px] w-[320px] md:w-[768px] lg:w-[1200px] 2xl:w-[1600px] h-[80px] md:h-[100px] lg:h-[120px]  bg-black mx-auto
+}
+
 .body {
    @apply bg-teal-300 max-w-[1600px] w-[320px] md:w-[768px] lg:w-[1200px] 2xl:w-[1600px] h-[1952px] md:h-[802px] lg:h-[1286px] 2xl:h-[780] mx-auto;
 }
@@ -18,6 +22,11 @@
 }
 
 /* POSITIONING */
+
+.navbarpos {
+   @apply flex justify-between items-center p-4 md:px-6 lg:px-10 md:shrink-0
+}
+
 .bodypos {
    @apply flex-col p-4 md:p-6 lg:p-10 justify-end items-start self-stretch md:flex md:flex-row gap-4 md:gap-6 lg:gap-10  md:shrink-0
 }
@@ -25,3 +34,8 @@
 .sidebarpos {
    @apply flex-col items-start gap-4 md:gap-5 self-stretch md:shrink-0;
 }
+
+.mainpos {
+   @apply flex-col items-start gap-4 md:gap-5 md:flex-1 self-stretch
+}
+

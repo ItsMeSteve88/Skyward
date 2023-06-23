@@ -28,14 +28,14 @@
 }
 
 .bodypos {
-   @apply flex-col p-4 md:p-6 lg:p-10 justify-end items-start self-stretch md:flex md:flex-row gap-4 md:gap-6 lg:gap-10  md:shrink-0
+   @apply flex flex-col p-4 md:p-6 lg:p-10 justify-end items-start self-stretch md:flex md:flex-row gap-4 md:gap-6 lg:gap-10  md:shrink-0
 }
 
 .sidebarpos {
-   @apply flex-col items-start gap-4 md:gap-5 self-stretch md:shrink-0;
+   @apply flex flex-col items-start gap-4 md:gap-5 self-stretch md:shrink-0;
 }
 
 .mainpos {
-   @apply flex-col items-start gap-4 md:gap-5 md:flex-1 self-stretch
+   @apply flex flex-col items-start gap-4 md:gap-5 md:flex-1 self-stretch
 }
 

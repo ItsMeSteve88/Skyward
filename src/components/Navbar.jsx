@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { IoLocationOutline, IoSearchOutline } from 'react-icons/io5'
 
-const Navbar = () => {
+const Navbar = () =>
+{
+   const [search, setSearch] = useState('')
+
+   const handleSearch = (e) =>
+   {
+      setSearch(e.target.value)
+   }
+
    return (
      <div className="navbar navbarpos">
        <div className="w-[151px] lg:w-1/3 2xl:w-[200px] h-6 lg:h-8">
@@ -12,7 +20,9 @@ const Navbar = () => {
            className="lg:w-[200px]"
          />
        </div>
-       <div className="bg-purple-300 hidden lg:flex w-1/3 md:h-14"></div>
+         <div className="hidden lg:flex w-1/3 md:h-14">
+            <input type="text" placeholder="Search city..." className="w-full h-12 bg-transparent border-2 rounded-full outline-none text-black text-sm px-4 relative lg:left-[150px]" onChange={handleSearch}/>
+       </div>
          <div className="w-[112px] md:w-[274px] lg:w-1/3 h-12 flex justify-center md:justify-end items-center gap-4">
             <div className='flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition'>
                <IoSearchOutline className=' w-6 h-6 text-black'/>

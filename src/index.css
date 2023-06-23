@@ -6,7 +6,7 @@
 /* MEDIAQUERIES */
 
 .navbar {
-   @apply max-w-[1600px] w-[320px] md:w-[768px] lg:w-[1200px] 2xl:w-[1600px] h-[80px] md:h-[100px] lg:h-[120px]  bg-black mx-auto
+   @apply max-w-[1600px] w-[320px] md:w-[768px] lg:w-[1200px] 2xl:w-[1600px] h-[80px] md:h-[100px] lg:h-[120px] mx-auto
 }
 
 .body {

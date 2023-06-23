@@ -1,11 +1,29 @@
 import React from 'react'
 
-import { IoLocationOutline } from 'react-icons/io5'
+import { IoLocationOutline, IoSearchOutline } from 'react-icons/io5'
 
 const Navbar = () => {
-   return <div className="navbar navbarpos">
-     
-  </div>;
+   return (
+     <div className="navbar navbarpos">
+       <div className="w-[151px] lg:w-1/3 2xl:w-[200px] h-6 lg:h-8">
+         <img
+           src="/src/assets/skyward.png"
+           alt="logo"
+           className="lg:w-[200px]"
+         />
+       </div>
+       <div className="bg-purple-300 hidden lg:flex w-1/3 md:h-14"></div>
+         <div className="w-[112px] md:w-[274px] lg:w-1/3 h-12 flex justify-center md:justify-end items-center gap-4">
+            <div className='flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition'>
+               <IoSearchOutline className=' w-6 h-6 text-black'/>
+            </div>
+            <div className='flex items-center justify-center w-12 md:w-[202px] md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition'>
+               <IoLocationOutline className='w-6 h-6 text-black' />
+               <p className='hidden md:flex text-black'>Current Location</p>
+            </div>
+       </div>
+     </div>
+   );
 }
 
 export default Navbar

@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
 import Card from "./components/sidebar/Card";
+import FiveDayForecast from "./components/sidebar/FiveDayForecast";
 
 function App() {
   return (
@@ -7,7 +8,8 @@ function App() {
         <Navbar />
         <div className="body bodypos">
            <div className="sidebar sidebarpos">
-              <Card/>
+              <Card />
+              <FiveDayForecast/>
            </div>
            <div className="main mainpos">right
               <div className='bg-orange-300 h- md:w-[416px] md:h-[709px] '>

@@ -10,11 +10,11 @@
 }
 
 .body {
-   @apply bg-teal-300 max-w-[1600px] w-[320px] md:w-[768px] lg:w-[1200px] 2xl:w-[1600px] h-[1952px] md:h-[802px] lg:h-[1286px] 2xl:h-[780] mx-auto;
+   @apply max-w-[1600px] w-[320px] md:w-[768px] lg:w-[1200px] 2xl:w-[1600px] h-[1952px] md:h-[802px] lg:h-[1286px] 2xl:h-[780] mx-auto;
 }
 
 .sidebar{
-   @apply bg-red-500 w-[288px] md:w-[280px] lg:w-[360px] 2xl:w-[360px] h-[585px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px];
+   @apply w-[288px] md:w-[280px] lg:w-[360px] 2xl:w-[360px] h-[585px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px];
 }
 
 .main{
@@ -42,5 +42,17 @@
 /* SIDEBAR */
 
 .card {
-   @apply w-[288px] h-[264px] md:w-[280px] md:h-[272px] lg:w-[360px] lg:h-[314px] rounded-[28px] p-5 flex flex-col bg-white
+   @apply w-[288px] h-[264px] md:w-[280px] md:h-[272px] lg:w-[360px] lg:h-[314px] rounded-[28px] p-5 flex flex-col border-base-200 border-2
+}
+
+.fivedayforecast {
+   @apply w-[288px] h-[305px] md:w-[280px] md:h-[333px] lg:w-[360px] lg:h-[439px] 2xl:h-[406px] pb-3 flex flex-col items-start self-stretch
+}
+
+.fivedaycard {
+   @apply w-[288px] h-[268px] md:w-[280px] md:h-[292px] lg:w-[360px] lg:h-[396px] rounded-[28px] flex flex-col items-start gap-3 md:gap-4 lg:gap-7 p-5 md:p-6 lg:p-8 self-stretch border-base-200 border-2
+}
+
+.fivedayrow {
+   @apply flex items-center self-stretch w-[248px] md:w-[232px] lg:w-[296px] h-9 lg:h-11
 }

@@ -39,3 +39,8 @@
    @apply flex flex-col items-start gap-4 md:gap-5 md:flex-1 self-stretch
 }
 
+/* SIDEBAR */
+
+.card {
+   @apply w-[288px] h-[264px] md:w-[280px] md:h-[272px] lg:w-[360px] lg:h-[314px] rounded-[28px] p-5 flex flex-col bg-white
+}

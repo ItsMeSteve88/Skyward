@@ -29,25 +29,29 @@ function App() {
               <div className="hpvfcontainer">
                 <HpvfCard
                   title="Humidity"
-                  percent="35%"
-                  icon={<WiHumidity className=" w-8 h-8" />}
+                  value='35'
+                  percent="%"
+                  icon={<WiHumidity className="w-8 h-8 lg:w-10 lg:h-10" />}
                 />
                 <HpvfCard
                   title="Pressure"
-                  hPa="1019hPa"
-                  icon={<WiWindy className=" w-8 h-8" />}
+                  value='1019'
+                  hPa="hPa"
+                  icon={<WiWindy className="w-8 h-8 lg:w-10 lg:h-10" />}
                 />
               </div>
               <div className="hpvfcontainer">
                 <HpvfCard
                   title="Visibility"
-                  km="10km"
-                  icon={<MdOutlineVisibility className=" w-8 h-8" />}
+                  value='10'
+                  km="km"
+                  icon={<MdOutlineVisibility className="w-8 h-8 lg:w-10 lg:h-10" />}
                 />
                 <HpvfCard
                   title="Feels Like"
-                  degrees="25&deg;C"
-                  icon={<WiThermometer className=" w-8 h-8" />}
+                  value='25'
+                  degrees="&deg;C"
+                  icon={<WiThermometer className="w-8 h-8 lg:w-10 lg:h-10" />}
                 />
               </div>
             </div>

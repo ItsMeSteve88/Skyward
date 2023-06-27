@@ -14,7 +14,7 @@
 }
 
 .sidebar{
-   @apply w-[288px] md:w-[280px] lg:w-[360px] 2xl:w-[360px] h-[585px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px];
+   @apply w-[288px] md:w-[280px] lg:w-[360px] 2xl:w-[360px] h-[585px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px]
 }
 
 .main{
@@ -50,7 +50,7 @@
 }
 
 .fivedaycard {
-   @apply w-[288px] h-[268px] md:w-[280px] md:h-[292px] lg:w-[360px] lg:h-[396px] rounded-[28px] flex flex-col items-start gap-3 md:gap-4 lg:gap-7 p-5 md:p-6 lg:p-8 self-stretch border-base-200 border-2
+   @apply w-[288px] h-[268px] md:w-[280px] md:h-[292px] lg:w-[360px] lg:h-[396px] rounded-[28px] flex flex-col items-start gap-3 md:gap-4 lg:gap-7 p-5 md:p-6 lg:p-8 self-stretch border-base-200 border-2 
 }
 
 .fivedayrow {
@@ -59,20 +59,20 @@
 
 /* Main */
 .todayshighlights {
-   @apply w-[288px] md:w-[416px] lg:w-[720px] 2xl:w-[1120px] h-[882px] md:h-[709px] lg:h-[867px] 2xl:h-[477px] md:gap-6 p-5 md:p-6 lg:p-8 flex flex-col items-start self-stretch rounded-[28px] border-base-200 border-2
+   @apply w-[288px] md:w-[416px] lg:w-[720px] 2xl:w-[1120px] h-[882px] md:h-[709px] lg:h-[867px] 2xl:h-[477px] md:gap-3 p-5 md:p-6 lg:p-8 flex flex-col items-start self-stretch rounded-[28px] border-base-200 bg-base-300 border-2
 }
 
 .todayhighlightscard {
-   @apply w-[248px] md:w-[368px] lg:w-[656px] 2xl:w-[1056px] h-[333px] md:h-[360px] lg:h-[440] 2xl:h-[220px] flex flex-col 2xl:flex items-start gap-4 md:gap-5 pb-4 md:pb-[20px] self-stretch bg-slate-500
+   @apply w-[248px] md:w-[368px] lg:w-[656px] 2xl:w-[1056px] h-[333px] md:h-[360px] lg:h-[440] 2xl:h-[220px] flex flex-col 2xl:flex 2xl:flex-row items-start gap-4 md:gap-5 pb-4 md:pb-[20px] self-stretch 
 }
 .aqi {
-   @apply w-[248px] md:w-[368px] lg:w-[656px] 2xl:w-[518px] h-[137px] md:h-[160px] lg:h-[200] 2xl:h-[200px] flex flex-col items-start gap-4 md:gap-5 pb-4 md:pb-[20px] self-stretch bg-red-500
+   @apply w-[248px] md:w-[368px] lg:w-[656px] 2xl:w-[518px] h-[137px] md:h-[160px] lg:h-[200] 2xl:h-[200px] rounded-2xl flex flex-col items-start gap-4 md:gap-5 pb-4 md:pb-[20px] self-stretch bg-base-200
 }
 .sas {
-   @apply bg-yellow-300 2xl:w-[518px] 2xl:h-[200px]
+   @apply w-[248px] md:w-[368px] lg:w-[656px] 2xl:w-[518px] h-[164px] md:h-[160px] lg:h-[200px] rounded-2xl flex flex-col 2xl:flex-1 items-start gap-5 lg:gap-6 p-4 lg:p-6 self-stretch bg-base-200
 }
 .hpvf {
-   @apply bg-green-300 w-[248px] md:w-[368px] lg:w-[656px] 2xl:w-[1056px] h-[472px] md:h-[260px] lg:h-[320px] 2xl:h-[150px] flex flex-col 2xl:flex 2xl:flex-row gap-4 2xl:gap-5 items-start self-stretch
+   @apply w-[248px] md:w-[368px] lg:w-[656px] 2xl:w-[1056px] h-[472px] md:h-[260px] lg:h-[320px] 2xl:h-[150px] flex flex-col 2xl:flex 2xl:flex-row gap-4 2xl:gap-5 items-start self-stretch
 }
 
 .hpvfcontainer {

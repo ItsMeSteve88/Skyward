@@ -8,6 +8,7 @@ import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
 import { MdOutlineVisibility } from 'react-icons/md';
 import SasCard from './components/main/SasCard';
 import AqiCard from './components/main/AqiCard';
+import HourlyWeatherCard from './components/main/HourlyWeatherCard';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             {/* AQI */}
             <div className="todayhighlightscard">
               <div className="aqi">
-                <AqiCard/>
+                <AqiCard />
               </div>
               <div className="sas">
                 <h1 className="text-base 2xl:text-lg font-semibold">
@@ -72,6 +73,17 @@ function App() {
                 />
               </div>
             </div>
+          </div>
+              <div className="hourlyweather">
+                 <div className='flex items-center self-stretch pb-3'>
+                    <h1 className='text-lg font-semibold flex-1'>Today at</h1>
+                 </div>
+                 <div className='hourlyrow'>
+                    <HourlyWeatherCard/>
+                 </div>
+                 <div className='hourlyrow2'>
+                    
+                 </div>
           </div>
         </div>
       </div>

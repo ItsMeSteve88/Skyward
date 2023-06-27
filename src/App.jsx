@@ -73,17 +73,24 @@ function App() {
                 />
               </div>
             </div>
+          <div className="hourlyweather">
+            <div className="flex items-center self-stretch pb-3">
+              <h1 className="text-lg font-semibold flex-1">Today at</h1>
+            </div>
+            <div className="hourlyrow">
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+            </div>
+            <div className="hourlyrow2">
+              <HourlyWeatherCard />
+            </div>
           </div>
-              <div className="hourlyweather">
-                 <div className='flex items-center self-stretch pb-3'>
-                    <h1 className='text-lg font-semibold flex-1'>Today at</h1>
-                 </div>
-                 <div className='hourlyrow'>
-                    <HourlyWeatherCard/>
-                 </div>
-                 <div className='hourlyrow2'>
-                    
-                 </div>
           </div>
         </div>
       </div>

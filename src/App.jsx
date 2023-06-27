@@ -7,10 +7,11 @@ import { WiHumidity, WiWindy, WiThermometer } from 'react-icons/wi';
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
 import { MdOutlineVisibility } from 'react-icons/md';
 import SasCard from './components/main/SasCard';
+import AqiCard from './components/main/AqiCard';
 
 function App() {
   return (
-    <div className='bg-base-300'>
+    <div className="bg-base-300">
       <Navbar />
       <div className="body bodypos">
         <div className="sidebar sidebarpos">
@@ -22,12 +23,20 @@ function App() {
             <h1 className="text-lg font-semibold">Today&apos;s Highlights</h1>
             {/* AQI */}
             <div className="todayhighlightscard">
-              <div className="aqi"></div>
+              <div className="aqi">
+                <AqiCard/>
+              </div>
               <div className="sas">
-                <h1 className="text-base 2xl:text-lg font-semibold">Sunrise & Sunset</h1>
+                <h1 className="text-base 2xl:text-lg font-semibold">
+                  Sunrise & Sunset
+                </h1>
                 <SasCard
-                  sun={<HiOutlineSun className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />}
-                  moon={<HiOutlineMoon className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />}
+                  sun={
+                    <HiOutlineSun className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />
+                  }
+                  moon={
+                    <HiOutlineMoon className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />
+                  }
                 />
               </div>
             </div>

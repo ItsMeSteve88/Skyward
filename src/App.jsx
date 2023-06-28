@@ -49,7 +49,7 @@ function App()
       {weather && (
         <div className="body bodypos">
           <div className="sidebar sidebarpos">
-            <Card />
+                 <Card weather={weather} />
             <FiveDayForecast />
           </div>
           <div className="main mainpos">

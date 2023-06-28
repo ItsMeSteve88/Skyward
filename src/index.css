@@ -84,12 +84,17 @@
 }
 
 .hourlyweather {
-   @apply  w-[288px] md:w-[416px] lg:w-[1120px] 2xl:w-[1120px] h-[349px] md:h-[357px] lg:h-[359px] 2xl:h-[359px] flex flex-col items-start self-stretch mt-8 
+   @apply  w-[250px] md:w-[365px] lg:w-[660px] 2xl:w-[1060px] h-[349px] md:h-[357px] lg:h-[359px] 2xl:h-[359px] flex flex-col items-start self-stretch mt-8
 }
 
 .hourlyrow {
-   @apply flex items-start self-stretch gap-3 md:gap-4 pb-4 md:pb-5  h-[164px] md:h-[168px]
+   @apply flex items-start self-stretch gap-3 md:gap-4 pb-4 md:pb-5  h-[164px] md:h-[168px]  overflow-hidden overflow-x-scroll whitespace-nowrap scroll-smooth
 }
+
+.hourlyrow::-webkit-scrollbar {
+   display: none;
+}
+
 .hourlyrow2 {
-   @apply flex items-start self-stretch gap-3 md:gap-4 h-[148px] md:h-[148px] 
+   @apply flex items-start self-stretch gap-3 md:gap-4 h-[148px] md:h-[148px] overflow-hidden overflow-x-scroll whitespace-nowrap scroll-smooth
 }

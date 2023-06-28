@@ -77,7 +77,7 @@ function App() {
             <div className="flex items-center self-stretch pb-3">
               <h1 className="text-lg font-semibold flex-1">Today at</h1>
             </div>
-            <div className="hourlyrow">
+            <div className="hourlyrow ">
               <HourlyWeatherCard />
               <HourlyWeatherCard />
               <HourlyWeatherCard />
@@ -88,6 +88,13 @@ function App() {
               <HourlyWeatherCard />
             </div>
             <div className="hourlyrow2">
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
+              <HourlyWeatherCard />
               <HourlyWeatherCard />
             </div>
           </div>

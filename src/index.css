@@ -96,5 +96,9 @@
 }
 
 .hourlyrow2 {
-   @apply flex items-start self-stretch gap-3 md:gap-4 h-[148px] md:h-[148px] overflow-hidden overflow-x-scroll whitespace-nowrap scroll-smooth
+   @apply flex items-start self-stretch gap-3 md:gap-4 h-[148px] md:h-[148px] overflow-hidden overflow-x-scroll whitespace-nowrap scroll-smooth  
+}
+
+.hourlyrow2::-webkit-scrollbar {
+   display: none;
 }

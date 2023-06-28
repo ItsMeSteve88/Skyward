@@ -4,11 +4,12 @@ import { IoLocationOutline, IoSearchOutline } from 'react-icons/io5'
 
 const Navbar = () =>
 {
-   const [search, setSearch] = useState('')
+   // const [search, setSearch] = useState('')
+   const [query, setQuery] = useState('')
 
    const handleSearch = (e) =>
    {
-      setSearch(e.target.value)
+      setQuery(e.target.value)
    }
 
    return (
@@ -27,10 +28,10 @@ const Navbar = () =>
             <div className='flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition'>
                <IoSearchOutline className=' w-6 h-6 '/>
             </div>
-            <div className='flex items-center justify-center w-12 md:w-[202px] md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition'>
+            <button type='submit' className='flex items-center justify-center w-12 md:w-[202px] md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition'>
                <IoLocationOutline className='w-6 h-6' />
                <p className='hidden md:flex '>Current Location</p>
-            </div>
+            </button>
        </div>
      </div>
    );

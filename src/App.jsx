@@ -9,6 +9,7 @@ import { MdOutlineVisibility } from 'react-icons/md';
 import SasCard from './components/main/SasCard';
 import AqiCard from './components/main/AqiCard';
 import HourlyWeatherCard from './components/main/HourlyWeatherCard';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
                 />
               </div>
             </div>
+
             <div className="hpvf">
               <div className="hpvfcontainer">
                 <HpvfCard
@@ -73,31 +75,33 @@ function App() {
                 />
               </div>
             </div>
-          <div className="hourlyweather">
-            <div className="flex items-center self-stretch pb-3">
-              <h1 className="text-lg font-semibold flex-1">Today at</h1>
+            <div className="hourlyweather">
+              <div className="flex items-center self-stretch pb-3">
+                <h1 className="text-lg font-semibold flex-1">Today at</h1>
+              </div>
+              <div className="hourlyrow ">
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+              </div>
+              <div className="hourlyrow2">
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+                <HourlyWeatherCard />
+              </div>
             </div>
-            <div className="hourlyrow ">
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-            </div>
-            <div className="hourlyrow2">
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-              <HourlyWeatherCard />
-            </div>
-          </div>
+            <div className="divider " />
+            <Footer />
           </div>
         </div>
       </div>

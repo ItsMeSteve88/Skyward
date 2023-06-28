@@ -1,17 +1,19 @@
-import Navbar from './components/Navbar'
-import HpvfCard from './components/main/HpvfCard';
-import Card from './components/sidebar/Card';
-import FiveDayForecast from './components/sidebar/FiveDayForecast';
+import { useEffect, useState } from "react";
+
+import { Navbar, Card, FiveDayForecast, AqiCard, SasCard, HpvfCard, Footer, HourlyWeatherCard } from './components';
 
 import { WiHumidity, WiWindy, WiThermometer } from 'react-icons/wi';
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
 import { MdOutlineVisibility } from 'react-icons/md';
-import SasCard from './components/main/SasCard';
-import AqiCard from './components/main/AqiCard';
-import HourlyWeatherCard from './components/main/HourlyWeatherCard';
-import Footer from './components/Footer';
 
-function App() {
+
+function App()
+{
+   
+
+   // fetchWeather();
+   
+
   return (
     <div className="bg-base-300">
       <Navbar />

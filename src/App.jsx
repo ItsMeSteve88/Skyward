@@ -50,7 +50,7 @@ function App()
         <div className="body bodypos">
           <div className="sidebar sidebarpos">
                  <Card weather={weather} />
-            <FiveDayForecast />
+            <FiveDayForecast weather={weather} />
           </div>
           <div className="main mainpos">
             <div className="todayshighlights">

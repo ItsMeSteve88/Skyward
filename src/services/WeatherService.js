@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 
-const API_KEY = 'VITE_OPENWEATHER_API_KEY'
+const API_KEY = 'f13af67768ac1086ae8f072594bcd44e'
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/'
 
 const getWeatherData = (infoType, searchParams) => {

@@ -49,8 +49,8 @@ function App()
       {weather && (
         <div className="body bodypos">
           <div className="sidebar sidebarpos">
-                 <Card weather={weather} />
-            <FiveDayForecast weather={weather} />
+            <Card weather={weather} />
+            <FiveDayForecast items={weather.daily} />
           </div>
           <div className="main mainpos">
             <div className="todayshighlights">
@@ -79,29 +79,29 @@ function App()
                 <div className="hpvfcontainer">
                   <HpvfCard
                     title="Humidity"
-                    value="35"
+                    value={weather.humidity}
                     percent="%"
                     icon={<WiHumidity className="w-8 h-8 lg:w-10 lg:h-10" />}
                   />
                   <HpvfCard
                     title="Pressure"
-                    value="1019"
+                    value={weather.pressure}
                     hPa="hPa"
                     icon={<WiWindy className="w-8 h-8 lg:w-10 lg:h-10" />}
                   />
                 </div>
                 <div className="hpvfcontainer">
                   <HpvfCard
-                    title="Visibility"
-                    value="10"
-                    km="km"
+                    title="Wind Speed"
+                    value={weather.speed.toFixed()}
+                    km="km/h"
                     icon={
                       <MdOutlineVisibility className="w-8 h-8 lg:w-10 lg:h-10" />
                     }
                   />
                   <HpvfCard
                     title="Feels Like"
-                    value="25"
+                    value={weather.feels_like.toFixed()}
                     degrees="&deg;C"
                     icon={<WiThermometer className="w-8 h-8 lg:w-10 lg:h-10" />}
                   />
@@ -112,24 +112,12 @@ function App()
                   <h1 className="text-lg font-semibold flex-1">Today at</h1>
                 </div>
                 <div className="hourlyrow ">
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
+                          <HourlyWeatherCard items={weather.hourly} />
+                  
                 </div>
                 <div className="hourlyrow2">
                   <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
-                  <HourlyWeatherCard />
+                  
                 </div>
               </div>
               <div className="divider " />

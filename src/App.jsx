@@ -45,7 +45,7 @@ function App()
 
   return (
     <div className="bg-base-300">
-      <Navbar />
+      <Navbar setQuery={setQuery} units={units} setUnits={setUnits}/>
       {weather && (
         <div className="body bodypos">
           <div className="sidebar sidebarpos">

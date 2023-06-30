@@ -55,17 +55,57 @@ const Navbar = ({setQuery, units, setUnits}) =>
              onChange={(e) => setCity(e.currentTarget.value)}
            />
          </div>
-            <button
-               onClick={handleSearchClick}
-               className="border-t-2 border-r-2 border-b-2 rounded-r-full md:h-12 border-base-200 flex items-center justify-center p-2 bg-base-300 hover:bg-base-200 transition">
-         
+         <button
+           onClick={handleSearchClick}
+           className="border-t-2 border-r-2 border-b-2 rounded-r-full md:h-12 border-base-200 flex items-center justify-center p-2 bg-base-300 hover:bg-base-200 transition"
+         >
            <IoSearchOutline className="w-6 h-6" />
          </button>
        </div>
        <div className="w-[112px] md:w-[274px] lg:w-1/3 h-12 flex justify-center md:justify-end items-center gap-4">
-         <div className="flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition">
-           <IoSearchOutline className=" w-6 h-6 " />
+         <div className="drawer drawer-end">
+           <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+           <div className="drawer-content">
+             {/* Page content here */}
+             <label
+               htmlFor="my-drawer-4"
+               className="drawer-button flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition"
+             >
+               <IoSearchOutline className=" w-6 h-6 " />
+             </label>
+           </div>
+           <div className="drawer-side">
+             <label
+               htmlFor="my-drawer-4"
+               className="drawer-overlay "
+             ></label>
+             <ul className="menu p-4 w-80 h-full bg-base-content text-base-content">
+               {/* Sidebar content here */}
+               <li>
+                 <div className="md:hidden w-1/3 md:h-14">
+                   <div className="w-[180px]">
+                     <input
+                       type="text"
+                       value={city}
+                       placeholder="Search city..."
+                       className="h-12 bg-transparent border-t-2 border-l-2 border-b-2 border-base-200 rounded-l-full outline-none text-sm px-4 relative lg:left-[150px]"
+                       onChange={(e) => setCity(e.currentTarget.value)}
+                     />
+                   </div>
+                   <button
+                     onClick={handleSearchClick}
+                     className="border-t-2 border-r-2 border-b-2 rounded-r-full h-12 border-base-200 flex items-center justify-center p-2 bg-transparent hover:bg-base-200 transition"
+                   >
+                     <IoSearchOutline className="w-6 h-6 text-base-200" />
+                   </button>
+                 </div>
+               </li>
+             </ul>
+           </div>
          </div>
+         {/* <div className="flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition drawer-button">
+           <IoSearchOutline className=" w-6 h-6 " />
+         </div> */}
          <button
            type="submit"
            className="flex items-center justify-center w-12 md:w-[202px] md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"

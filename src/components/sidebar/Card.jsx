@@ -12,7 +12,7 @@ const Card = ({weather:{temp, description, details, dt, timezone, name, country,
               <h2 className="text-[56px] md:text-[74-px] xl:text-[80px] leading-[110%]">{temp.toFixed(0)}&deg;</h2>
           <sub className="text-[32px] md:text-[64-px] xl:text-[80px] leading-[36px]">C</sub>
         </div>
-        <div className="w-[134px] h-16 flex items-center justify-center flex-1">
+        <div className="w-[134px] h-16 flex items-center justify-center flex-1 ">
           <img src={iconUrlFromCode(icon)} alt="icon" />
         </div>
         </div>

@@ -75,10 +75,7 @@ const Navbar = ({setQuery, units, setUnits}) =>
              </label>
            </div>
            <div className="drawer-side">
-             <label
-               htmlFor="my-drawer-4"
-               className="drawer-overlay "
-             ></label>
+             <label htmlFor="my-drawer-4" className="drawer-overlay "></label>
              <ul className="menu p-4 w-80 h-full bg-base-content text-base-content">
                {/* Sidebar content here */}
                <li>
@@ -88,7 +85,7 @@ const Navbar = ({setQuery, units, setUnits}) =>
                        type="text"
                        value={city}
                        placeholder="Search city..."
-                       className="h-12 bg-transparent border-t-2 border-l-2 border-b-2 border-base-200 rounded-l-full outline-none text-sm px-4 relative lg:left-[150px]"
+                       className="h-12 bg-transparent border-t-2 border-l-2 border-b-2 border-base-200 rounded-l-full outline-none text-sm px-4 relative lg:left-[150px] text-base-200"
                        onChange={(e) => setCity(e.currentTarget.value)}
                      />
                    </div>
@@ -100,6 +97,27 @@ const Navbar = ({setQuery, units, setUnits}) =>
                    </button>
                  </div>
                </li>
+               <div className="mt-6 flex justify-between items-center w-[260px]">
+                 <li>
+                   <p className="text-sm text-base-200">Choose your Unit:</p>
+                 </li>
+                 <button
+                   type="submit"
+                   className="flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
+                   onClick={handleUnitsChange}
+                   name="metric"
+                 >
+                   <p className="text-xl">&deg;C</p>
+                 </button>
+                 <button
+                   type="submit"
+                   className="flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
+                   onClick={handleUnitsChange}
+                   name="imperial"
+                 >
+                   <p className="text-xl">&deg;F</p>
+                 </button>
+               </div>
              </ul>
            </div>
          </div>

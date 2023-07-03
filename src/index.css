@@ -14,7 +14,7 @@
 }
 
 .sidebar{
-   @apply w-[288px] md:w-[280px] lg:w-[360px] 2xl:w-[360px] h-[585px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px]
+   @apply w-[288px] md:w-[280px] lg:w-[360px] 2xl:w-[360px] h-[585px] md:h-[778px] lg:h-[1246px] 2xl:h-[740px] 
 }
 
 .main{
@@ -28,7 +28,7 @@
 }
 
 .bodypos {
-   @apply flex flex-col p-4 md:p-6 lg:p-10 justify-end items-start self-stretch md:flex md:flex-row gap-4 md:gap-6 lg:gap-10  md:shrink-0
+   @apply flex flex-col p-4 md:p-6 lg:p-10 justify-end items-start self-stretch md:flex md:flex-row gap-4 md:gap-6 lg:gap-10 md:shrink-0
 }
 
 .sidebarpos {
@@ -36,30 +36,30 @@
 }
 
 .mainpos {
-   @apply flex flex-col items-start gap-4 md:gap-5 md:flex-1 self-stretch
+   @apply flex flex-col items-start gap-4 md:gap-5 md:flex-1 self-stretch 
 }
 
 /* SIDEBAR */
 
 .card {
-   @apply w-[288px] h-[264px] md:w-[280px] md:h-[272px] lg:w-[360px] lg:h-[314px] rounded-[28px] p-5 lg:p-8 flex flex-col border-base-200 border-2
+   @apply w-[288px] h-[264px] md:w-[280px] md:h-[272px] lg:w-[360px] lg:h-[314px] rounded-[28px] p-5 lg:p-8 flex flex-col border-base-200 bg-base-300 border-2
 }
 
 .fivedayforecast {
-   @apply w-[288px] h-[305px] md:w-[280px] md:h-[333px] lg:w-[360px] lg:h-[439px] 2xl:h-[406px] pb-3 flex flex-col items-start self-stretch
+   @apply w-[288px] h-[305px] md:w-[280px] md:h-[333px] lg:w-[360px] lg:h-[439px] 2xl:h-[406px] pb-3 flex flex-col items-start self-stretch 
 }
 
 .fivedaycard {
-   @apply w-[288px] h-[268px] md:w-[280px] md:h-[292px] lg:w-[360px] lg:h-[396px] rounded-[28px] flex flex-col items-start gap-3 md:gap-4 lg:gap-7 p-5 md:p-6 lg:p-8 self-stretch border-base-200 border-2 
+   @apply w-[288px] h-[268px] md:w-[280px] md:h-[292px] lg:w-[360px] lg:h-[396px] rounded-[28px] flex flex-col items-start gap-3 md:gap-4 lg:gap-7 p-5 md:p-6 lg:p-8 self-stretch border-base-200 border-2 bg-base-300
 }
 
 .fivedayrow {
-   @apply flex items-center self-stretch w-[248px] md:w-[232px] lg:w-[296px] h-9 lg:h-11
+   @apply flex items-center self-stretch w-[248px] md:w-[232px] lg:w-[296px] h-9 lg:h-11 bg-base-200 rounded-lg
 }
 
 /* Main */
 .todayshighlights {
-   @apply w-[288px] md:w-[416px] lg:w-[720px] 2xl:w-[1120px] h-[882px] md:h-[709px] lg:h-[867px] 2xl:h-[477px] md:gap-3 p-5 md:p-6 lg:p-8 flex flex-col items-start self-stretch rounded-[28px] border-base-200 bg-base-300 border-2
+   @apply w-[288px] md:w-[416px] lg:w-[720px] 2xl:w-[1120px] h-[882px] md:h-[709px] lg:h-[867px] 2xl:h-[477px] md:gap-3 p-5 md:p-6 lg:p-8 flex flex-col items-start self-stretch rounded-[28px] border-base-200 bg-base-300 border-2 
 }
 
 .todayhighlightscard {
@@ -76,7 +76,7 @@
 }
 
 .hpvfcontainer {
-   @apply w-[248px] md:w-[368px] lg:w-[656px] h-[228px] md:h-[120px] lg:h-[656px] flex flex-col md:flex md:flex-row items-start self-stretch gap-4 2xl:gap-5
+   @apply w-[248px] md:w-[368px] lg:w-[656px] h-[228px] md:h-[120px] lg:h-[656px] flex flex-col md:flex md:flex-row items-start self-stretch gap-4 2xl:gap-5 
 }
 
 .hpvfcard {
@@ -84,7 +84,7 @@
 }
 
 .hourlyweather {
-   @apply  w-[250px] md:w-[365px] lg:w-[660px] 2xl:w-[1060px] h-[349px] md:h-[357px] lg:h-[359px] 2xl:h-[359px] flex flex-col items-start self-stretch mt-8
+   @apply  w-[290px] md:w-[420px] lg:w-[720px] 2xl:w-[1120px] h-[449px] md:h-[457px] lg:h-[459px] p-4 md:p-5 lg:p-6 flex flex-col items-start self-stretch mt-8 bg-base-300 rounded-[28px] border-2 border-base-200
 }
 
 .hourlyrow {
@@ -96,7 +96,7 @@
 }
 
 .hourlyrow2 {
-   @apply flex items-start self-stretch gap-3 md:gap-4 h-[148px] md:h-[148px] overflow-hidden overflow-x-scroll whitespace-nowrap scroll-smooth  
+   @apply flex items-start self-stretch gap-3 w-full md:gap-4 h-[148px] md:h-[148px] overflow-hidden overflow-x-scroll whitespace-nowrap scroll-smooth  
 }
 
 .hourlyrow2::-webkit-scrollbar {

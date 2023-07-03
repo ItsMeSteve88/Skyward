@@ -16,11 +16,12 @@ import getFormattedWeatherData from "./services/WeatherService";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Alerts from "./components/main/Alerts";
 
 function App()
 {
    
-   const [query, setQuery] = useState({ q: "Hereford, US" });
+   const [query, setQuery] = useState({ q: "Hamburg, DE" });
    const [units, setUnits] = useState('metric');
    const [weather, setWeather] = useState(null);
    
@@ -44,7 +45,7 @@ function App()
    
 
   return (
-    <div className="bg-base-300">
+    <div className="">
       <Navbar setQuery={setQuery} units={units} setUnits={setUnits} />
       {weather && (
         <div className="body bodypos">
@@ -107,26 +108,24 @@ function App()
                   />
                 </div>
               </div>
-              <div className="hourlyweather">
-                <div className="flex items-center self-stretch pb-3">
-                  <h1 className="text-lg font-semibold flex-1">Today at</h1>
-                </div>
-                <div className="hourlyrow ">
-                          <HourlyWeatherCard items={weather.hourly} />
-                  
-                </div>
-                <div className="hourlyrow2">
-                  <HourlyWeatherCard />
-                  
-                </div>
-              </div>
-              <div className="divider " />
-              <Footer />
             </div>
+            <div className="hourlyweather ">
+              <div className="flex items-center self-stretch pb-3">
+                <h1 className="text-lg font-semibold flex-1">Today at</h1>
+              </div>
+              <div className="hourlyrow ">
+                <HourlyWeatherCard items={weather.hourly} />
+              </div>
+              <div className="hourlyrow2">
+                       <Alerts items={weather.alerts} />
+              </div>
+            </div>
+            <div className="divider " />
+            <Footer />
           </div>
         </div>
       )}
-      <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+      <ToastContainer autoClose={2000} theme="colored" newestOnTop={true} />
     </div>
   );
 }

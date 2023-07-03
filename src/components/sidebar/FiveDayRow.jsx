@@ -9,7 +9,7 @@ const FiveDayRow = ({icon, temp, feelslike, day, details }) => {
            <h2 className='text-sm lg:text-base'>{feelslike}&deg;</h2>
         </div>
         <p className='flex justify-end w-[73px]'>{day}</p>
-        <p className='flex justify-end w-[73px]'>{details}</p>
+        <p className='flex justify-end w-[73px] mr-4 lg:ml-2'>{details}</p>
     </div>
   )
 }

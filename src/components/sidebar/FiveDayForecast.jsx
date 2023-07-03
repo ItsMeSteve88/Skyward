@@ -12,6 +12,7 @@ const FiveDayForecast = ({items}) => {
               <FiveDayRow key={index}
                  items={item}
                  icon={iconUrlFromCode(item.icon)}
+                 temp={item.temp.toFixed()}
                  feelslike={item.feels_like.toFixed()}
                  day={item.title}
                  details={item.details}

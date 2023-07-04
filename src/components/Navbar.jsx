@@ -79,7 +79,7 @@ const Navbar = ({setQuery, units, setUnits}) =>
              <ul className="menu p-4 w-80 h-full bg-base-content text-base-content">
                {/* Sidebar content here */}
                <li>
-                 <div className="md:hidden w-1/3 md:h-14">
+                 <div className="lg:hidden w-1/3 md:h-14">
                    <div className="w-[180px]">
                      <input
                        type="text"
@@ -124,6 +124,22 @@ const Navbar = ({setQuery, units, setUnits}) =>
          {/* <div className="flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition drawer-button">
            <IoSearchOutline className=" w-6 h-6 " />
          </div> */}
+         <button
+                   type="submit"
+                   className="hidden lg:flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
+                   onClick={handleUnitsChange}
+                   name="metric"
+                 >
+                   <p className="text-xl">&deg;C</p>
+                 </button>
+                 <button
+                   type="submit"
+                   className="hidden lg:flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
+                   onClick={handleUnitsChange}
+                   name="imperial"
+                 >
+                   <p className="text-xl">&deg;F</p>
+                 </button>
          <button
            type="submit"
            className="flex items-center justify-center w-12 md:w-[202px] md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"

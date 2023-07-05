@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { WiStrongWind } from 'react-icons/wi';
 import AqiCardRow from './AqiCardRow';
 import AqiCardCol from './AqiCardCol';
 
-const AqiCard = () => {
+const AqiCard = () =>
+{
    return (
      <>
        <div className="flex justify-between items-start self-stretch">

@@ -24,6 +24,33 @@ function App()
    const [query, setQuery] = useState({ q: "Hamburg, DE" });
    const [units, setUnits] = useState('metric');
    const [weather, setWeather] = useState(null);
+   const [aqi, setAqi] = useState(null);
+   const [error, setError] = useState(null);
+
+   useEffect(() =>
+   {
+      console.log('useeffect runs')
+      
+      const fetchAqi = async () =>
+      {
+         try {
+            const response = await fetch('http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=50&lon=50&appid=f13af67768ac1086ae8f072594bcd44e')
+
+            if (!response.ok)
+            {
+               throw new Error(`Error! status: ${response.status}`)
+            }
+
+            const result = await response.json()
+            setAqi(result);
+         } catch (error) {
+            setError(error.message)
+         }
+      }
+   
+       fetchAqi();
+   }, []);
+   console.log(aqi);
    
    useEffect(() =>
    { 
@@ -59,7 +86,7 @@ function App()
               {/* AQI */}
               <div className="todayhighlightscard">
                 <div className="aqi">
-                  <AqiCard />
+                  <AqiCard aqi={aqi} />
                 </div>
                 <div className="sas">
                   <h1 className="text-base 2xl:text-lg font-semibold">
@@ -117,7 +144,7 @@ function App()
                 <HourlyWeatherCard items={weather.hourly} />
               </div>
               <div className="hourlyrow2">
-                       <Alerts items={weather.alerts} />
+                <Alerts items={weather.alerts} />
               </div>
             </div>
             <div className="divider " />

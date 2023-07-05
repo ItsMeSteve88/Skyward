@@ -3,7 +3,7 @@ import React from 'react'
 
 const Alerts = ({items}) => {
   return (
-     <div className='mt-2 rounded-2xl w-full'>
+     <div className='mt-2 rounded-2xl'>
         <h2 className='text-lg font-semibold flex-1 mb-2'>Alerts</h2>
         {items?.length > 0 ? (
         items?.map((item, index) => (

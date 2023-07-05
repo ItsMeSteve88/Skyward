@@ -48,7 +48,7 @@ function App()
          }
       }
    
-       fetchAqi();
+       //fetchAqi();
    }, []);
    console.log(aqi);
    

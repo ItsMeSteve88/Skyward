@@ -9,6 +9,31 @@ const getWeatherData = (infoType, searchParams) => {
    return fetch(url).then((res) => res.json());
 };
 
+const formatCurrentAqi = (data) =>
+{
+   const {
+      main: { aqi },
+      components: { no2, o3, so2, pm2_5}
+   } = data;
+
+   return { aqi, no2, o3, so2, pm2_5 };
+}
+
+const formatForecastAqi = (data) =>
+{
+   let { list } = data;
+   list = list.slice(0, 2).map((d) =>
+   {
+      return {
+         no2: d.components.no2,
+         o3: d.components.o3,
+         so2: d.components.so2,
+         pm2_5: d.components.pm2_5,
+      };
+   });
+   return list;
+};
+
 const formatCurrentWeather = (data) => {
    const {
      coord: { lat, lon },
@@ -86,6 +111,23 @@ const formatForecastWeather = (data) => {
    return { timezone, daily, hourly, alerts  };
 };
  
+const getFormattedAqiData = async (searchParams) => {
+   const formattedCurrentAqi = await getWeatherData(
+     "air_pollution",
+     searchParams
+   ).then(formatCurrentAqi);
+ 
+   const { lat, lon } = formattedCurrentAqi;
+ 
+   const formattedForecastAqi = await getWeatherData("onecall", {
+     lat,
+     lon,
+     units: searchParams.units,
+   }).then(formatForecastAqi);
+ 
+   return { ...formattedCurrentAqi, ...formattedForecastAqi };
+};
+
 const getFormattedWeatherData = async (searchParams) => {
    const formattedCurrentWeather = await getWeatherData(
      "weather",
@@ -139,4 +181,4 @@ export const aqiText = {
  
  export default getFormattedWeatherData;
  
- export { formatToLocalTime, iconUrlFromCode };
+ export { getFormattedAqiData, formatToLocalTime, iconUrlFromCode };

@@ -86,13 +86,14 @@ function App()
               {/* AQI */}
               <div className="todayhighlightscard">
                 <div className="aqi">
-                  <AqiCard aqi={aqi} />
+                  <AqiCard aqi={""} />
                 </div>
                 <div className="sas">
                   <h1 className="text-base 2xl:text-lg font-semibold">
                     Sunrise & Sunset
                   </h1>
                   <SasCard
+                    weather={weather}
                     sun={
                       <HiOutlineSun className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />
                     }

@@ -13,7 +13,7 @@ import AqiCard from './components/main/AqiCard';
 import HourlyWeatherCard from './components/main/HourlyWeatherCard';
 import Footer from './components/Footer';
 import getFormattedWeatherData from "./services/WeatherService";
-
+import { getFormattedAqiData } from "./services/WeatherService";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Alerts from "./components/main/Alerts";
@@ -27,31 +27,49 @@ function App()
    const [aqi, setAqi] = useState(null);
    const [error, setError] = useState(null);
 
-   useEffect(() =>
-   {
-      console.log('useeffect runs')
+   // useEffect(() =>
+   // {
+   //    console.log('useeffect runs')
       
-      const fetchAqi = async () =>
-      {
-         try {
-            const response = await fetch('http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=50&lon=50&appid=f13af67768ac1086ae8f072594bcd44e')
+   //    const fetchAqi = async () =>
+   //    {
+   //       try {
+   //          const response = await fetch('http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=50&lon=50&appid=f13af67768ac1086ae8f072594bcd44e')
 
-            if (!response.ok)
-            {
-               throw new Error(`Error! status: ${response.status}`)
-            }
+   //          if (!response.ok)
+   //          {
+   //             throw new Error(`Error! status: ${response.status}`)
+   //          }
 
-            const result = await response.json()
-            setAqi(result);
-         } catch (error) {
-            setError(error.message)
-         }
-      }
+   //          const result = await response.json()
+   //          setAqi(result);
+   //       } catch (error) {
+   //          setError(error.message)
+   //       }
+   //    }
    
-       //fetchAqi();
-   }, []);
-   console.log(aqi);
+   //     fetchAqi();
+   // }, []);
+   // console.log(aqi);
    
+   useEffect(() =>
+   { 
+     const fetchAqi = async () =>
+     {
+       const message = query.q ? query.q : 'current location'
+ 
+       toast.info(`Fetching the air quality for ${message}`);
+       await getFormattedAqiData({ ...query, units }).then((data) =>
+       {
+       toast.success(`Successfully fetched the air quality for ${data.name}, ${data.country}`)
+          setAqi(data);
+          console.log(data);
+     });
+   }
+ 
+   //fetchAqi();
+   }, [query, units]);
+
    useEffect(() =>
    { 
      const fetchWeather = async () =>
@@ -67,7 +85,7 @@ function App()
      });
    }
  
-   fetchWeather();
+   //fetchWeather();
    }, [query, units]);
    
 
@@ -86,7 +104,7 @@ function App()
               {/* AQI */}
               <div className="todayhighlightscard">
                 <div className="aqi">
-                  <AqiCard aqi={""} />
+                  <AqiCard aqi={aqi} />
                 </div>
                 <div className="sas">
                   <h1 className="text-base 2xl:text-lg font-semibold">
@@ -153,7 +171,7 @@ function App()
           </div>
         </div>
       )}
-      <ToastContainer autoClose={2000} theme="colored" newestOnTop={true} />
+      <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
     </div>
   );
 }

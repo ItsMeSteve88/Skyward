@@ -66,7 +66,6 @@ const formatForecastWeather = (data) => {
        temp_min: d.temp.min,
         temp_max: d.temp.max,
         uvi: d.uvi,
-        visibility: d.visibility,
         wind_speed: d.wind_speed,
         wind_deg: d.wind_deg,
         wind_gust: d.wind_gust,
@@ -79,7 +78,8 @@ const formatForecastWeather = (data) => {
        temp: d.temp,
        icon: d.weather[0].icon,
        uvi: d.uvi,
-       pop: d.pop,
+        pop: d.pop,
+        visibility: d.visibility,
      };
    });
 

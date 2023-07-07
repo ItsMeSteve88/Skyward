@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import HpvfCard from './components/main/HpvfCard';
 import Card from './components/sidebar/Card';
 import FiveDayForecast from './components/sidebar/FiveDayForecast';
-
+import { UilTear, UilSunset, UilSun } from '@iconscout/react-unicons';
 import { WiHumidity, WiWindy, WiThermometer } from 'react-icons/wi';
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
 import { MdOutlineVisibility } from 'react-icons/md';
@@ -113,10 +113,10 @@ function App()
                   <SasCard
                     weather={weather}
                     sun={
-                      <HiOutlineSun className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />
+                      <UilSun className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />
                     }
                     moon={
-                      <HiOutlineMoon className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />
+                      <UilSunset className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12" />
                     }
                   />
                 </div>
@@ -128,7 +128,7 @@ function App()
                     title="Humidity"
                     value={weather.humidity}
                     percent="%"
-                    icon={<WiHumidity className="w-8 h-8 lg:w-10 lg:h-10" />}
+                    icon={<UilTear className="w-8 h-8 lg:w-10 lg:h-10" />}
                   />
                   <HpvfCard
                     title="Pressure"
@@ -139,9 +139,9 @@ function App()
                 </div>
                 <div className="hpvfcontainer">
                   <HpvfCard
-                    title="Wind Speed"
-                    value={weather.speed.toFixed()}
-                    km="km/h"
+                    title="Visibility"
+                    value={weather.hourly[0].visibility}
+                    km="ft"
                     icon={
                       <MdOutlineVisibility className="w-8 h-8 lg:w-10 lg:h-10" />
                     }

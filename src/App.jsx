@@ -67,7 +67,7 @@ function App()
      });
    }
  
-   //fetchAqi();
+   fetchAqi();
    }, [query, units]);
 
    useEffect(() =>
@@ -85,7 +85,7 @@ function App()
      });
    }
  
-   //fetchWeather();
+   fetchWeather();
    }, [query, units]);
    
 

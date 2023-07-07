@@ -64,7 +64,12 @@ const formatForecastWeather = (data) => {
        sunrise: d.sunrise,
        sunset: d.sunset,
        temp_min: d.temp.min,
-       temp_max: d.temp.max,
+        temp_max: d.temp.max,
+        uvi: d.uvi,
+        visibility: d.visibility,
+        wind_speed: d.wind_speed,
+        wind_deg: d.wind_deg,
+        wind_gust: d.wind_gust,
      };
    });
  
@@ -73,6 +78,8 @@ const formatForecastWeather = (data) => {
        title: formatToLocalTime(d.dt, timezone, "hh:mm a"),
        temp: d.temp,
        icon: d.weather[0].icon,
+       uvi: d.uvi,
+       pop: d.pop,
      };
    });
 
@@ -83,6 +90,8 @@ const formatForecastWeather = (data) => {
        description: d.description,
      };
    });
+
+   
    
    return { timezone, daily, hourly, alerts  };
 };

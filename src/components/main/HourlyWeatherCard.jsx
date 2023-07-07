@@ -12,7 +12,7 @@ const HourlyWeatherCard = ({items}) => {
              alt="icon"
              className="h-12 w-12 2xl:h-16 2xl:w-16"
            />
-           <div className="flex items-center">
+             <div className="flex flex-col items-center">
              <p className="text-base 2xl:text-md">{item.temp.toFixed()}&deg;</p>
            </div>
          </div>

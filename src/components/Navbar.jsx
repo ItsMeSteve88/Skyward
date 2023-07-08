@@ -1,24 +1,26 @@
 import React, { useState } from 'react'
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { IoLocationOutline, IoSearchOutline } from 'react-icons/io5'
 
-const Navbar = ({setQuery, units, setUnits}) =>
+const Navbar = ({setQuery, query, units, setUnits}) =>
 {
    // const [search, setSearch] = useState('')
    const [city, setCity] = useState('')
-
+   
    const handleSearchClick = () =>
-  {
-    if (city !== '')
-    {
+   {
+      if (city !== '')
+      {
       setQuery({q: city})
       setCity('')
     }
    }
    
    const handleLocationClick = () =>
-  {
-    if (navigator.geolocation)
+   {
+      if (navigator.geolocation)
+       toast.info(`Fetching weather for your current location`);
     {
       navigator.geolocation.getCurrentPosition((position) => {
         setQuery({
@@ -148,7 +150,8 @@ const Navbar = ({setQuery, units, setUnits}) =>
            <IoLocationOutline className="w-6 h-6" />
            <p className="hidden md:flex ">Current Location</p>
          </button>
-       </div>
+         </div>
+         <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
      </div>
    );
 }

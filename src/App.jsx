@@ -56,12 +56,8 @@ function App()
    { 
      const fetchAqi = async () =>
      {
-       const message = query.q ? query.q : 'current location'
- 
-       toast.info(`Fetching the air quality for ${message}`);
        await getFormattedAqiData({ ...query, units }).then((data) =>
        {
-       toast.success(`Successfully fetched the air quality for ${data.name}, ${data.country}`)
           setAqi(data);
           console.log(data);
      });
@@ -74,9 +70,7 @@ function App()
    { 
      const fetchWeather = async () =>
      {
-       const message = query.q ? query.q : 'current location'
- 
-       toast.info(`Fetching weather for your ${message}`);
+       //const message = query.q ? query.q : 'current location'
        await getFormattedWeatherData({ ...query, units }).then((data) =>
        {
        toast.success(`Successfully fetched weather for ${data.name}, ${data.country}`)

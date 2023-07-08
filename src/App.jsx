@@ -52,19 +52,19 @@ function App()
    // }, []);
    // console.log(aqi);
    
-   useEffect(() =>
-   { 
-     const fetchAqi = async () =>
-     {
-       await getFormattedAqiData({ ...query, units }).then((data) =>
-       {
-          setAqi(data);
-          console.log(data);
-     });
-   }
+   // useEffect(() =>
+   // { 
+   //   const fetchAqi = async () =>
+   //   {
+   //     await getFormattedAqiData({ ...query, units }).then((data) =>
+   //     {
+   //        setAqi(data);
+   //        console.log(data);
+   //   });
+   // }
  
-   fetchAqi();
-   }, [query, units]);
+   // fetchAqi();
+   // }, [query, units]);
 
    useEffect(() =>
    { 
@@ -98,7 +98,7 @@ function App()
               {/* AQI */}
               <div className="todayhighlightscard">
                 <div className="aqi">
-                  <AqiCard aqi={aqi} />
+                  <AqiCard weather={weather.daily[0]} />
                 </div>
                 <div className="sas">
                   <h1 className="text-base 2xl:text-lg font-semibold">

@@ -57,7 +57,7 @@ const formatForecastWeather = (data) => {
        icon: d.weather[0].icon,
        feels_like: d.feels_like.day,
        humidity: d.humidity,
-       details: d.weather[0].main,
+        details: d.weather[0].main,
        description: d.weather[0].description,
        speed: d.wind_speed,
        pressure: d.pressure,
@@ -80,7 +80,7 @@ const formatForecastWeather = (data) => {
        uvi: d.uvi,
         pop: d.pop,
         visibility: d.visibility,
-     };
+      };
    });
 
    alerts = alerts?.map((d) => {
@@ -96,16 +96,6 @@ const formatForecastWeather = (data) => {
    return { timezone, daily, hourly, alerts  };
 };
  
-const getFormattedAqiData = async (searchParams) => {
-   const formattedCurrentAqi = await getWeatherData(
-     "air_pollution",
-     searchParams
-   )
-   return { ...formattedCurrentAqi };
-};
-
-
-
 const getFormattedWeatherData = async (searchParams) => {
    const formattedCurrentWeather = await getWeatherData(
      "weather",
@@ -124,7 +114,7 @@ const getFormattedWeatherData = async (searchParams) => {
    return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
  
-export const aqiText = {
+export const uviText = {
    1: {
       level: 'Good',
       message: 'Air quality is considered satisfactory, and air pollution poses little or no risk.'
@@ -159,4 +149,4 @@ export const aqiText = {
  
  export default getFormattedWeatherData;
  
- export { getFormattedAqiData, formatToLocalTime, iconUrlFromCode };
+ export { formatToLocalTime, iconUrlFromCode };

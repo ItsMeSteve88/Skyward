@@ -13,7 +13,6 @@ import AqiCard from './components/main/AqiCard';
 import HourlyWeatherCard from './components/main/HourlyWeatherCard';
 import Footer from './components/Footer';
 import getFormattedWeatherData from "./services/WeatherService";
-import { getFormattedAqiData } from "./services/WeatherService";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Alerts from "./components/main/Alerts";
@@ -27,44 +26,6 @@ function App()
    const [aqi, setAqi] = useState(null);
    const [error, setError] = useState(null);
 
-   // useEffect(() =>
-   // {
-   //    console.log('useeffect runs')
-      
-   //    const fetchAqi = async () =>
-   //    {
-   //       try {
-   //          const response = await fetch('http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=50&lon=50&appid=f13af67768ac1086ae8f072594bcd44e')
-
-   //          if (!response.ok)
-   //          {
-   //             throw new Error(`Error! status: ${response.status}`)
-   //          }
-
-   //          const result = await response.json()
-   //          setAqi(result);
-   //       } catch (error) {
-   //          setError(error.message)
-   //       }
-   //    }
-   
-   //     fetchAqi();
-   // }, []);
-   // console.log(aqi);
-   
-   // useEffect(() =>
-   // { 
-   //   const fetchAqi = async () =>
-   //   {
-   //     await getFormattedAqiData({ ...query, units }).then((data) =>
-   //     {
-   //        setAqi(data);
-   //        console.log(data);
-   //   });
-   // }
- 
-   // fetchAqi();
-   // }, [query, units]);
 
    useEffect(() =>
    { 

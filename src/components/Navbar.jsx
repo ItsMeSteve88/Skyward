@@ -127,21 +127,21 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
            <IoSearchOutline className=" w-6 h-6 " />
          </div> */}
          <button
-                   type="submit"
-                   className="hidden lg:flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
-                   onClick={handleUnitsChange}
-                   name="metric"
-                 >
-                   <p className="text-xl">&deg;C</p>
-                 </button>
-                 <button
-                   type="submit"
-                   className="hidden lg:flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
-                   onClick={handleUnitsChange}
-                   name="imperial"
-                 >
-                   <p className="text-xl">&deg;F</p>
-                 </button>
+           type="submit"
+           className="hidden lg:flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
+           onClick={handleUnitsChange}
+           name="metric"
+         >
+           <p className="text-xl">&deg;C</p>
+         </button>
+         <button
+           type="submit"
+           className="hidden lg:flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
+           onClick={handleUnitsChange}
+           name="imperial"
+         >
+           <p className="text-xl">&deg;F</p>
+         </button>
          <button
            type="submit"
            className="flex items-center justify-center w-12 md:w-[202px] md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"
@@ -150,8 +150,8 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
            <IoLocationOutline className="w-6 h-6" />
            <p className="hidden md:flex ">Current Location</p>
          </button>
-         </div>
-         <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+       </div>
+       <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
      </div>
    );
 }

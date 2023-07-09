@@ -9,41 +9,34 @@ import UviCardRow from './UviCardRow';
 const AqiCard = ({weather: {uvi}}) =>
 {
    let uviText;
-   let uviBgColor;
    let uviSummary;
    if (uvi < 3)
    {
-      uviText = 'Low';
-      uviBgColor = '#1a8f09';
+      uviText = 'Low';    
       uviSummary = 'The UVI is low, no protection is required.';
    } else if
       (uvi < 5)
    {
-      uviText = 'Medium';
-      uviBgColor = '#1a8f09';
+      uviText = 'Medium'; 
       uviSummary = 'The UVI is medium, protection is required.';
    } else if
       (uvi < 7)
    {
-      uviText = 'High';
-      uviBgColor = '26, 143, 9';
+      uviText = 'High'; 
       uviSummary = 'The UVI is high, protection is required.';
    } else if
       (uvi < 10)
    {
       uviText = 'Very High';
-      uviBgColor = '#1a8f09';
       uviSummary = 'The UVI is very high, extra protection is required.';
    } else if 
       (uvi === 11)
    {
       uviText = 'Extreme';
-      uviBgColor = '#1a8f09';
       uviSummary = 'The UVI is extremely high, extra protection is required.';
    } else  
    {
       uviText = 'Unknown';
-      uviBgColor = '#1a8f09';
       uviSummary = 'The UVI data is unavailable.';
    }
 
@@ -55,9 +48,14 @@ const AqiCard = ({weather: {uvi}}) =>
          py-[2px]
          px-3 W-[59px]
          h-[23px]
+         text-white
          flex
          items-center
-         bg-${uviBgColor}
+         ${uviText === 'Low' ? 'bg-[#1a8f09]' : 'bg-[#1a8f09]'}
+         ${uviText === 'Medium' ? 'bg-[#deb70b]' : 'bg-[#1a8f09]'}
+         ${uviText === 'High' ? 'bg-[#de740b]' : 'bg-[#1a8f09]'}
+         ${uviText === 'Very High' ? 'bg-[#de0b0b]' : 'bg-[#1a8f09]'}
+         ${uviText === 'Extremely High' ? 'bg-[#940bde]' : 'bg-[#1a8f09]'}
          rounded-full
          justify-center
          `}>

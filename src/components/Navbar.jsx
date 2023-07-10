@@ -5,7 +5,6 @@ import { IoLocationOutline, IoSearchOutline } from 'react-icons/io5'
 
 const Navbar = ({setQuery, query, units, setUnits}) =>
 {
-   // const [search, setSearch] = useState('')
    const [city, setCity] = useState('')
    
    const handleSearchClick = () =>
@@ -18,14 +17,11 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
    }
 
    const handleSubmit = () => {
-      console.log('form submitted ✅');
       handleSearchClick()
     };
    
     useEffect(() => {
       const keyDownHandler = event => {
-        console.log('User pressed: ', event.key);
-  
         if (event.key === 'Enter') {
           event.preventDefault();
           handleSubmit();
@@ -68,6 +64,39 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
            className="lg:w-[200px]"
          />
        </div>
+       <button
+         className="btn hidden lg:flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 hover:bg-base-200 transition text-xl relative left-[10px] md:right-[60px] lg:right-[40px] 2xl:left-[50px]"
+         onClick={() => window.my_modal_2.showModal()}
+       >
+         ?
+       </button>
+       <dialog id="my_modal_2" className="modal">
+         <form method="dialog" className="modal-box bg-base-300">
+           <h3 className="font-bold text-lg">
+             The search engine is very flexible. How it works:
+           </h3>
+           <p className="py-4">
+             To make it more precise put the city or town&apos;s name, comma,
+             and then the
+             <a
+               href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes"
+               className=" font-bold text-red-500"
+               target="blank"
+             >
+               {" "}
+               2-letter country code
+             </a>
+             . You will get the proper city or town in the chosen country.{" "}
+             <br /> <br />
+             For the most accurate search, the order is important - first is
+             city name, then comma then country. For example - London, GB or New
+             York, US.
+           </p>
+         </form>
+         <form method="dialog" className="modal-backdrop">
+           <button>close</button>
+         </form>
+       </dialog>
        <div className="hidden lg:flex lg:justify-between w-1/3 md:h-14">
          <div className="w-[330px]">
            <input
@@ -85,7 +114,7 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
            <IoSearchOutline className="w-6 h-6" />
          </button>
        </div>
-       <div className="w-[112px] md:w-[274px] lg:w-1/3 h-12 flex justify-center md:justify-end items-center gap-4">
+       <div className="w-[112px] md:w-[274px] lg:w-1/3 h-12 flex justify-center md:justify-end items-center gap-4 md:relative left-[140px] lg:right-[200px] 2xl:left-[100px]">
          <div className="drawer drawer-end">
            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
            <div className="drawer-content">
@@ -141,6 +170,31 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
                  >
                    <p className="text-xl">&deg;F</p>
                  </button>
+               </div>
+               <div className="mt-6 flex justify-between items-center w-[260px]">
+                 <li>
+                   <div className="flex flex-wrap w-[300px]">
+                     <p className="text-sm text-base-200">
+                       The search engine is very flexible, here&apos;s how it
+                       works: <br /> <br />
+                       To make it more precise put the city or town&apos;s name,
+                       comma, and then the
+                       <a
+                         href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes"
+                         className=" font-bold text-red-500"
+                         target="blank"
+                       >
+                         {" "}
+                         2-letter country code
+                       </a>
+                       . You will get the proper city or town in the chosen
+                       country. <br /> <br />
+                       For the most accurate search, the order is important -
+                       first is city name, then comma then country. For example
+                       - London, GB or New York, US.
+                     </p>
+                   </div>
+                 </li>
                </div>
              </ul>
            </div>

@@ -28,7 +28,7 @@ const AqiCard = ({weather: {uvi}}) =>
    {
       uviText = 'High'; 
       uviSummary = 'The UVI is high, protection is required.';
-      uviHelp = 'This UV rating is climbing the UV Index scale, so it’s recommended adding a sunscreen suitable to your skin type too. The sun protection factor (SPF) should be at least twice as high as the stated UV index. So, for a ranking g of 6 – 7, you need a factor of at least SPF 14 – but it’s also important to consider your individual skin type. So if you’re very fair-skinned, a higher SPF is a good idea. Make sure you don’t spend all day in direct sunlight – especially at around noon when the sun is at its highest. That’s the perfect time to hang out in the shade.';
+      uviHelp = 'This UV rating is climbing the UV Index scale, so it’s recommended adding a sunscreen suitable to your skin type too. The sun protection factor (SPF) should be at least twice as high as the stated UV index. So, for a ranking of 6 – 7, you need a factor of at least SPF 14 – but it’s also important to consider your individual skin type. So if you’re very fair-skinned, a higher SPF is a good idea. Make sure you don’t spend all day in direct sunlight – especially at around noon when the sun is at its highest. That’s the perfect time to hang out in the shade.';
    } else if
       (uvi < 10)
    {
@@ -78,7 +78,7 @@ const AqiCard = ({weather: {uvi}}) =>
          <div>
            <div>
              <button
-               className="btn drawer-button flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-300 hover:bg-base-300 transition text-2xl"
+               className="btn flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-300 hover:bg-base-300 transition text-2xl"
                onClick={() => window.my_modal_3.showModal()}
              >
                ?

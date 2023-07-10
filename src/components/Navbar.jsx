@@ -123,9 +123,6 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
              </ul>
            </div>
          </div>
-         {/* <div className="flex items-center justify-center w-12 h-12 rounded-full shrink-0 border-2 border-base-200 lg:hidden hover:bg-base-200 transition drawer-button">
-           <IoSearchOutline className=" w-6 h-6 " />
-         </div> */}
          <button
            type="submit"
            className="hidden lg:flex items-center justify-center w-12 md:gap-4 h-12 rounded-full shrink-0 border-2 border-base-200 bg-base-200 hover:bg-base-300 transition"

@@ -102,3 +102,12 @@
 .hourlyrow2::-webkit-scrollbar {
    display: none;
 }
+
+.uvi {
+   @apply w-full h-[70px] md:h-[80px] lg:h-[70px] p-2 overflow-hidden overflow-y-scroll scroll-smooth md:flex md:flex-row
+}
+
+.uvi::-webkit-scrollbar {
+   display: none;
+}
+

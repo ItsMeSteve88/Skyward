@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { IoLocationOutline, IoSearchOutline } from 'react-icons/io5'
@@ -16,6 +16,27 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
       setCity('')
     }
    }
+
+   const handleSubmit = () => {
+      console.log('form submitted ✅');
+      handleSearchClick()
+    };
+   
+    useEffect(() => {
+      const keyDownHandler = event => {
+        console.log('User pressed: ', event.key);
+  
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          handleSubmit();
+        }
+       };
+       document.addEventListener('keydown', keyDownHandler);
+
+    return () => {
+      document.removeEventListener('keydown', keyDownHandler);
+    };
+  },);
    
    const handleLocationClick = () =>
    {
@@ -89,6 +110,7 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
                        placeholder="Search city..."
                        className="h-12 bg-transparent border-t-2 border-l-2 border-b-2 border-base-200 rounded-l-full outline-none text-sm px-4 relative lg:left-[150px] text-base-200"
                        onChange={(e) => setCity(e.currentTarget.value)}
+                       onSubmit={handleSubmit}
                      />
                    </div>
                    <button

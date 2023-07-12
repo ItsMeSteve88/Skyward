@@ -11,7 +11,7 @@ const Footer = () => {
         rel="noreferrer"
         >
         <img
-          src="/public/openweather.png"
+          src="/public/assets/openweather.png"
           className="w-[150px] h-8"
           loading="lazy"
           alt="Openweather"

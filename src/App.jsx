@@ -20,7 +20,7 @@ import Alerts from "./components/main/Alerts";
 function App()
 {
    
-   const [query, setQuery] = useState({ q: "Hamburg, DE" });
+   const [query, setQuery] = useState({ q: "Bristol, GB" });
    const [units, setUnits] = useState('metric');
    const [weather, setWeather] = useState(null);
 

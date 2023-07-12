@@ -1,4 +1,5 @@
 import React from 'react'
+import openweather from '../../public/assets/openweather.png'
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
         rel="noreferrer"
         >
         <img
-          src="/public/assets/openweather.png"
+          src={openweather}
           className="w-[150px] h-8"
           loading="lazy"
           alt="Openweather"

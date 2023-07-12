@@ -3,6 +3,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { IoLocationOutline, IoSearchOutline } from 'react-icons/io5'
 
+import skyward from '../../public/assets/skyward.png'
+
 const Navbar = ({setQuery, query, units, setUnits}) =>
 {
    const [city, setCity] = useState('')
@@ -59,7 +61,7 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
      <div className="navbar navbarpos">
        <div className="w-[151px] lg:w-1/3 2xl:w-[200px] h-6 lg:h-8">
          <img
-           src="/public/assets/skyward.png"
+           src={skyward}
            alt="logo"
            className="lg:w-[200px]"
          />

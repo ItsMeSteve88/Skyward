@@ -5,8 +5,8 @@ import HpvfCard from './components/main/HpvfCard';
 import Card from './components/sidebar/Card';
 import FiveDayForecast from './components/sidebar/FiveDayForecast';
 import { UilTear, UilSunset, UilSun } from '@iconscout/react-unicons';
-import { WiHumidity, WiWindy, WiThermometer } from 'react-icons/wi';
-import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
+import { WiWindy, WiThermometer } from 'react-icons/wi';
+
 import { MdOutlineVisibility } from 'react-icons/md';
 import SasCard from './components/main/SasCard';
 import AqiCard from './components/main/AqiCard';

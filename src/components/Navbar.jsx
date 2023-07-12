@@ -226,7 +226,6 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
            <p className="hidden md:flex ">Current Location</p>
          </button>
        </div>
-       <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
      </div>
    );
 }

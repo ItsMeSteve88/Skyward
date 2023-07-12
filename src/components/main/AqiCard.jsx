@@ -72,8 +72,10 @@ const AqiCard = ({weather: {uvi}}) =>
            {uviText}
          </div>
        </div>
-       <div className="flex items-center gap-4 md:gap-6 lg:gap-12 md:flex-1 self-stretch">
-         <TbUvIndex className="w-8 md:w-10 lg:w-12 h-8 md:h-9 lg:h-12" />
+       <div className="flex items-center gap-2 md:gap-6 lg:gap-12 md:flex-1 self-stretch">
+         <div>
+           <TbUvIndex className="w-8 md:w-10 lg:w-12 h-8 md:h-9 lg:h-12" />
+         </div>
          <UviCardRow summary={uviSummary} uvi={uvi} />
          <div>
            <div>

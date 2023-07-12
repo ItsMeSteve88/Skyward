@@ -6,7 +6,7 @@ const UviCardRow = ({ summary, uvi, uviText }) =>
    
   return (
     <div className="uvi">
-      <div>
+      <div className='w-full'>
         <h2
           className={`text-base 2xl:text-lg font-semibold
         
@@ -25,7 +25,7 @@ const UviCardRow = ({ summary, uvi, uviText }) =>
             {uvi}
           </span>
         </h2>
-        <p>{summary}</p>
+        <p className='text-sm md:text-lg'>{summary}</p>
         </div>
     </div>
   );

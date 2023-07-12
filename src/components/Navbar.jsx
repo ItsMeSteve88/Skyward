@@ -59,7 +59,7 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
      <div className="navbar navbarpos">
        <div className="w-[151px] lg:w-1/3 2xl:w-[200px] h-6 lg:h-8">
          <img
-           src="/src/assets/skyward.png"
+           src="/public/skyward.png"
            alt="logo"
            className="lg:w-[200px]"
          />

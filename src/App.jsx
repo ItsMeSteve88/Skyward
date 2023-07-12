@@ -23,20 +23,16 @@ function App()
    const [query, setQuery] = useState({ q: "Hamburg, DE" });
    const [units, setUnits] = useState('metric');
    const [weather, setWeather] = useState(null);
-   const [aqi, setAqi] = useState(null);
-   const [error, setError] = useState(null);
 
 
    useEffect(() =>
    { 
      const fetchWeather = async () =>
      {
-       //const message = query.q ? query.q : 'current location'
        await getFormattedWeatherData({ ...query, units }).then((data) =>
        {
        toast.success(`Successfully fetched weather for ${data.name}, ${data.country}`)
           setWeather(data);
-          console.log(data);
      });
    }
  

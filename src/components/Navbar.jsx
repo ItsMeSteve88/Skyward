@@ -37,7 +37,7 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
    const handleLocationClick = () =>
    {
       if (navigator.geolocation)
-       toast.info(`Fetching weather for your current location`);
+         toast.info(`Fetching weather for your current location`);
     {
       navigator.geolocation.getCurrentPosition((position) => {
         setQuery({
@@ -128,11 +128,11 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
            </div>
            <div className="drawer-side">
              <label htmlFor="my-drawer-4" className="drawer-overlay "></label>
-             <ul className="menu p-4 w-80 h-full bg-base-content text-base-content">
+             <ul className="menu p-4 h-full bg-base-content text-base-content">
                {/* Sidebar content here */}
                <li>
                  <div className="lg:hidden w-1/3 md:h-14">
-                   <div className="w-[180px]">
+                   <div className="w-[185px]">
                      <input
                        type="text"
                        value={city}
@@ -173,7 +173,7 @@ const Navbar = ({setQuery, query, units, setUnits}) =>
                </div>
                <div className="mt-6 flex justify-between items-center w-[260px]">
                  <li>
-                   <div className="flex flex-wrap w-[300px]">
+                   <div className="flex flex-wrap w-[270px] p-4">
                      <p className="text-sm text-base-200">
                        The search engine is very flexible, here&apos;s how it
                        works: <br /> <br />
